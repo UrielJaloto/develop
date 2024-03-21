@@ -15,38 +15,31 @@ object Form1: TForm1
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
+    Text = 'Start'
     OnClick = btStartClick
   end
-  object edTitulo: TEdit
+  object edTitle: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     TabOrder = 2
     Position.X = 8.000000000000000000
     Position.Y = 16.000000000000000000
   end
-  object edAutor: TEdit
+  object edAuthor: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     TabOrder = 3
     Position.X = 8.000000000000000000
     Position.Y = 46.000000000000000000
   end
-  object edCategoria: TEdit
+  object edCategory: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     TabOrder = 4
     Position.X = 8.000000000000000000
     Position.Y = 76.000000000000000000
   end
-  object edNumeroPaginas: TEdit
+  object edNumberPages: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     TabOrder = 5
     Position.X = 8.000000000000000000
     Position.Y = 106.000000000000000000
-  end
-  object pnDisplay: TPanel
-    Position.X = 116.000000000000000000
-    Position.Y = 16.000000000000000000
-    Size.Width = 117.000000000000000000
-    Size.Height = 142.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 6
   end
 end

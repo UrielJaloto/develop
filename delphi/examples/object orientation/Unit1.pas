@@ -12,28 +12,27 @@ type
 
   TForm1 = class(TForm)
     btStart: TButton;
-    edTitulo: TEdit;
-    edAutor: TEdit;
-    edCategoria: TEdit;
-    edNumeroPaginas: TEdit;
-    pnDisplay: TPanel;
+    edTitle: TEdit;
+    edAuthor: TEdit;
+    edCategory: TEdit;
+    edNumberPages: TEdit;
     procedure btStartClick(Sender: TObject);
-    function LerEdit (const Param1: TEdit): string;
+    function ReadEdit (const Param1: TEdit): string;
   end;
 
 
-  TPublicacao = class(Tobject)
+  TPublication = class(Tobject)
   public
-    FTitulo: string;
-    FAutor: string;
-    FNumeroPaginas: Integer;
+    FTitle: string;
+    FAuthor: string;
+    FNumberPages: Integer;
   end;
 
-  TLivro = class(TPublicacao)
+  TBook = class(TPublication)
   strict private
-    FCategoria: string;
+    FCategory: string;
   public
-    constructor Create(const pTitulo, pAutor, pCategoria: string; pNurmeoPaginas: Integer);
+    constructor Create(const pTitle, pAuthor, pCategory: string; pNumberPages: Integer);
   end;
 
 var
@@ -46,31 +45,32 @@ implementation
 
 procedure TForm1.btStartClick(Sender: TObject);
 var
-  vLivro: TLivro;
-  vTitulo, vAutor, vCategoria: String;
-  vNumeroPaginas: Integer;
-  vPanel: TPanel;
+  vLivro: Tbook;
+  vTitle, vAuthor, vCategory: String;
+  vNumberPages: Integer;
+
 begin
-  vTitulo:= LerEdit(edTitulo);
-  vAutor:= LerEdit(edAutor);
-  vCategoria:= LerEdit(edCategoria);
-  vNumeroPaginas:= LerEdit(edNumeroPaginas).ToInteger;
-  vPanel:= TPanel.Create(pnDisplay);
+  vTitle:= ReadEdit(edTitle);
+  vAuthor:= ReadEdit(edAuthor);
+  vCategory:= ReadEdit(edCategory);
+  vNumberPAges:= ReadEdit(edNumberPages).ToInteger;
+  ShowMessage('Title: ' + vtitle + ' / Author: ' + vAuthor + ' / Category: ' + vCategory
+  + ' / Number of Pages: ' + vNumberPages.ToString);
 
 
 end;
 
 { TLivro }
 
-constructor TLivro.Create(const pTitulo, pAutor, pCategoria: string; pNurmeoPaginas: Integer);
+constructor Tbook.Create(const pTitle, pAuthor, pCategory: string; pNumberPAges: Integer);
 begin
-  FTitulo := pTitulo;
-  FAutor := pAutor;
-  FCategoria := pCategoria;
-  FNumeroPaginas := pNurmeoPaginas;
+  FTitle := pTitle;
+  FAuthor := pAuthor;
+  FCategory := pCategory;
+  FNumberPages := pNumberPages;
 end;
 
-function TForm1.LerEdit(const Param1: TEdit): string;
+function TForm1.ReadEdit(const Param1: TEdit): string;
 begin
   result:= param1.text
 end;
