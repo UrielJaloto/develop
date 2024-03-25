@@ -1,2 +1,23 @@
-/delphi/examples/object orientation/Win32/Debug/*.exe
-/delphi/examples/object orientation/Win32/Debug/*.dcu
+*.ddp
+*.exe
+*.dll
+*.bpl
+*.bpi
+*.dcp
+*.so
+*.apk
+*.drc
+*.map
+*.dres
+*.rsm
+*.tds
+*.local
+*.identcache
+*.projdata
+*.tvsconfig
+*.dsk
+__history/
+*.~*
+*.dcu
+*.dof
+*.cfg
