@@ -1,11 +1,124 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  Caption = 'Form1'
   ClientHeight = 480
   ClientWidth = 640
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
   DesignerMasterStyle = 0
+  object btStart: TButton
+    Position.X = 8.000000000000000000
+    Position.Y = 282.000000000000000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'CADASTRAR'
+    OnClick = btStartClick
+  end
+  object edNome: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Position.X = 8.000000000000000000
+    Position.Y = 41.000000000000000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object edDataNascimento: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    Position.X = 8.000000000000000000
+    Position.Y = 239.000000000000000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object edDocumento: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    Position.X = 8.000000000000000000
+    Position.Y = 106.000000000000000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object edEmail: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 4
+    Position.X = 8.000000000000000000
+    Position.Y = 171.000000000000000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object lbNome: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 16.000000000000000000
+    Text = 'NOME:'
+    TabOrder = 5
+  end
+  object lbDocumento: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 81.000000000000000000
+    Text = 'DOCUMENTO:'
+    TabOrder = 6
+  end
+  object lbEmail: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 146.000000000000000000
+    Text = 'EMAIL:'
+    TabOrder = 7
+  end
+  object lbDataNascimento: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 214.000000000000000000
+    Text = 'NASCIMENTO:'
+    TabOrder = 8
+  end
+  object btLimparGrid: TButton
+    Position.X = 8.000000000000000000
+    Position.Y = 312.000000000000000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+    Text = 'LIMPAR GRID'
+    OnClick = btLimparGridClick
+  end
+  object sgTabela: TStringGrid
+    CanFocus = True
+    ClipChildren = True
+    Position.X = 184.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 448.000000000000000000
+    Size.Height = 318.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    Viewport.Width = 428.000000000000000000
+    Viewport.Height = 293.000000000000000000
+    object scNome: TStringColumn
+      Header = 'Nome:'
+      Size.Width = 81.000000000000000000
+    end
+    object scDocumento: TStringColumn
+      Header = 'Documento:'
+      ReadOnly = True
+      Size.Width = 93.000000000000000000
+    end
+    object scEmail: TStringColumn
+      Header = 'Email:'
+      Size.Width = 81.000000000000000000
+    end
+    object scNascimento: TStringColumn
+      Header = 'Nascimento:'
+      Size.Width = 95.000000000000000000
+    end
+    object scIdade: TStringColumn
+      Header = 'Idade:'
+      Size.Width = 71.000000000000000000
+    end
+  end
 end
